@@ -1,0 +1,98 @@
+html {
+   text-align: center;
+   padding: 2rem;
+   align-self: center;
+   text-align: center;
+   background: linear-gradient(to bottom, rgb(83, 83, 83), lightgray);
+   margin: 0;
+}
+
+.arm {
+   --rotation: 0;
+   transform: rotate(calc(var(--rotation) * 1deg));
+}
+
+.spinPend {
+   animation: spinPend 2.25s ease-out;
+   transform-origin: top;
+   transform-box: fill-box;
+}
+
+.swing {
+   animation: swing 2s linear infinite;
+   transform-origin: top;
+   transform-box: fill-box;
+}
+
+.spinSec {
+   animation: spincw 2s linear;
+   transform-origin: center 75%;
+   transform-box: fill-box;
+}
+
+.spinMin {
+   animation: spincw 2s ease-out;
+   transform-origin: 75% center;
+   transform-box: fill-box;
+}
+
+.spinHour {
+   animation: spincw 2s ease-out;
+   transform-origin: 25% center;
+   transform-box: fill-box;
+}
+
+button {
+   line-height: 3rem;
+   font-size: 2rem;
+   margin-left: 5rem;
+   background-color: #24220E;
+   color: #FCC534;
+}
+
+.hide {
+   visibility: hidden;
+}
+
+.move {
+   transform: translateY(-8rem);
+   transition: transform 3s ease;
+}
+
+button:hover{
+   border: #FCC534 solid 1px;
+   transform: scale(1.1);
+}
+
+@keyframes spincw {
+   0% {
+      transform: rotate(0deg);
+   }
+   100% {
+      transform: rotate(--rotation);
+   }
+}
+
+@keyframes spinPend {
+   0% {
+      transform: rotate(0deg);
+   }
+   100% {
+      transform: rotate(360deg);
+   }
+}
+
+@keyframes swing {
+   0% {
+      transform: rotate(0deg);
+   }
+   25% {
+      transform: rotate(40deg);
+   }
+   75% {
+      transform: rotate(-40deg);
+   }
+   100% {
+      transform: rotate(0deg);
+   }
+}

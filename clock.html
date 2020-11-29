@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Clock</title>
+   <link rel="stylesheet" href="./clock.css">
+   <script src="./clock.js" defer></script>
+</head>
+
+<body>
+   <div id="btn">
+      <button type="button">Set The Time</button>
+   </div>
+   <div id="clock">
+   <svg id="Clock" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+      viewBox="-1100 -300 4000 3000" width="60%">
+      <defs>
+         <linearGradient id="linear-gradient" x1="1037.83" y1="2590.5" x2="1019.95" y2="1043.75"
+            gradientUnits="userSpaceOnUse">
+            <stop offset="0" stop-color="#fcee21" />
+            <stop offset="0.54" stop-color="#fbcf3b" />
+         </linearGradient>
+         <radialGradient id="radial-gradient" cx="1028" cy="2191" r="266.69" gradientUnits="userSpaceOnUse">
+            <stop offset="0" stop-color="#fcee21" />
+            <stop offset="0.97" stop-color="#fbb03b" />
+         </radialGradient>
+         <radialGradient id="radial-gradient-2" cx="1029.49" cy="825.6" r="690.51" gradientUnits="userSpaceOnUse">
+            <stop offset="0" stop-color="#5a5a5a" />
+            <stop offset="0.88" stop-color="#050505" stop-opacity="0.92" />
+         </radialGradient>
+         <linearGradient id="linear-gradient-2" x1="2669.56" y1="203.82" x2="2750.68" y2="59.84"
+            gradientTransform="translate(-1655.9 1579.9) rotate(-30)" gradientUnits="userSpaceOnUse">
+            <stop offset="0" stop-color="#fcee21" />
+            <stop offset="0.44" stop-color="#fbb03b" />
+         </linearGradient>
+         <linearGradient id="linear-gradient-3" x1="3329.75" y1="762.66" x2="3410.87" y2="618.68"
+            gradientTransform="matrix(0.87, -0.5, 0.5, 0.87, -2706.93, 1625.54)" xlink:href="#linear-gradient-2" />
+         <linearGradient id="linear-gradient-4" x1="3468.19" y1="2427.88" x2="3549.32" y2="2283.9"
+            gradientTransform="matrix(0.87, -0.5, 0.5, 0.87, -3659.94, 798.14)" xlink:href="#linear-gradient-2" />
+         <linearGradient id="linear-gradient-5" x1="2909.35" y1="3088.07" x2="2990.48" y2="2944.09"
+            gradientTransform="translate(-3306.6 146.8) rotate(-30)" xlink:href="#linear-gradient-2" />
+         <linearGradient id="linear-gradient-6" x1="1244.13" y1="3226.52" x2="1325.26" y2="3082.54"
+            gradientTransform="matrix(0.87, -0.5, 0.5, 0.87, -1388.18, -805.18)" xlink:href="#linear-gradient-2" />
+         <linearGradient id="linear-gradient-7" x1="583.95" y1="2667.68" x2="665.07" y2="2523.7"
+            gradientTransform="translate(-337.2 -850.8) rotate(-30)" xlink:href="#linear-gradient-2" />
+         <linearGradient id="linear-gradient-8" x1="445.5" y1="1002.46" x2="526.62" y2="858.48"
+            gradientTransform="translate(615.8 -23.4) rotate(-30)" xlink:href="#linear-gradient-2" />
+         <linearGradient id="linear-gradient-9" x1="1004.34" y1="342.27" x2="1085.46" y2="198.29"
+            gradientTransform="translate(262.5 627.9) rotate(-30)" xlink:href="#linear-gradient-2" />
+         <linearGradient id="linear-gradient-10" x1="1015.01" y1="836.4" x2="1042.01" y2="836.4"
+            gradientTransform="matrix(1, 0, 0, 1, 0, 0)" xlink:href="#linear-gradient-2" />
+         <linearGradient id="linear-gradient-11" x1="2322.48" y1="3568.48" x2="2807.7" y2="3568.48"
+            gradientTransform="translate(3714.9 4404.3) rotate(180)" xlink:href="#linear-gradient-2" />
+         <linearGradient id="linear-gradient-12" x1="-373.49" y1="3730.61" x2="300.31" y2="3730.61"
+            gradientTransform="matrix(0.14, 0.93, -0.37, 0.37, 2400.18, -671.31)" gradientUnits="userSpaceOnUse">
+            <stop offset="0" stop-color="#9e005d" stop-opacity="0.8" />
+            <stop offset="0.09" stop-color="#a70055" stop-opacity="0.8" />
+            <stop offset="0.21" stop-color="#bf003e" stop-opacity="0.8" />
+            <stop offset="0.36" stop-color="#e60018" stop-opacity="0.8" />
+            <stop offset="0.44" stop-color="red" stop-opacity="0.8" />
+         </linearGradient>
+         <linearGradient id="linear-gradient-13" x1="500.4" y1="830.53" x2="1180.29" y2="830.53"
+            gradientTransform="translate(-34.6 5.3) scale(1.05 1)" xlink:href="#linear-gradient-2" />
+      </defs>
+      <g id="clockFace">
+         <g id="pendulum" class="">
+            <rect x="961" y="827" width="133" height="1739.58" style="fill: url(#linear-gradient)" />
+            <circle cx="1028" cy="2191" r="239" style="fill: url(#radial-gradient)" />
+         </g>
+         <circle cx="1028.5" cy="826.6" r="642.5"
+            style="fill: #fcee21;stroke: #fbb03b;stroke-miterlimit: 10;stroke-width: 4px" />
+         <circle cx="1029.5" cy="825.6" r="628"
+            style="stroke: #fbb03b;stroke-miterlimit: 10;stroke-width: 6px;fill: url(#radial-gradient-2)" />
+         <rect x="745.2" y="294.9" width="24" height="116" transform="translate(-75 425.9) rotate(-30)"
+            style="fill: url(#linear-gradient-2)" />
+         <rect x="545.3" y="494.4" width="24" height="116" transform="translate(-199.7 758.9) rotate(-60)"
+            style="fill: url(#linear-gradient-3)" />
+         <rect x="544.8" y="1039.9" width="24" height="116" transform="translate(-115.6 2129.1) rotate(-120)"
+            style="fill: url(#linear-gradient-4)" />
+         <rect x="744.3" y="1239.8" width="24" height="116" transform="translate(762.4 2799.8) rotate(-150)"
+            style="fill: url(#linear-gradient-5)" />
+         <rect x="1289.8" y="1240.3" width="24" height="116" transform="translate(3078.3 1771.7) rotate(150)"
+            style="fill: url(#linear-gradient-6)" />
+         <rect x="1489.7" y="1040.8" width="24" height="116" transform="translate(3204.1 347.7) rotate(120)"
+            style="fill: url(#linear-gradient-7)" />
+         <rect x="1490.2" y="495.3" width="24" height="116" transform="translate(1230.2 -1024.3) rotate(60)"
+            style="fill: url(#linear-gradient-8)" />
+         <rect x="1290.7" y="295.4" width="24" height="116" transform="translate(351.2 -604) rotate(30)"
+            style="fill: url(#linear-gradient-9)" />
+         <text transform="translate(968.1 330.3) scale(0.99 1)"
+            style="font-size: 155.02838134765625px;fill: #e2b72b;stroke: #fbb03b;stroke-miterlimit: 10;stroke-width: 3px;font-family: Apple-Chancery, Apple Chancery">12</text>
+         <text transform="translate(977.2 1403.6) scale(0.99 1)"
+            style="font-size: 155.02838134765625px;fill: #e2b72b;stroke: #fbb03b;stroke-miterlimit: 10;stroke-width: 3px;font-family: Apple-Chancery, Apple Chancery">6</text>
+         <text transform="translate(439.2 836.6) scale(0.99 1)"
+            style="font-size: 155.02838134765625px;fill: #e2b72b;stroke: #fbb03b;stroke-miterlimit: 10;stroke-width: 3px;font-family: Apple-Chancery, Apple Chancery">9</text>
+         <text transform="translate(1536.2 865.6) scale(0.99 1)"
+            style="font-size: 155.02838134765625px;fill: #e2b72b;stroke: #fbb03b;stroke-miterlimit: 10;stroke-width: 3px;font-family: Apple-Chancery, Apple Chancery">3</text>
+         <circle cx="1028.5" cy="836.4" r="13.5" style="fill: url(#linear-gradient-10)" />
+      </g>
+      <path id="hourArm" class="arm"
+         d="M909,850c-14.1-53.7,60.7-13.6,82.1-32.2,7.7-15.3,20.4-23.5,37.6-23.6C1132,849.3,1270.5,811.8,1392,822c13.5,66.5-268.8,5.7-325.8,32.8-21.2,41.7-65.6,17.4-81.8-4.9C959.2,850.1,934.2,850,909,850Zm101.7-14.1c-.6,23.3,35.6,23.8,35.6.5S1010.5,812.6,1010.7,835.9Z"
+         style="fill: url(#linear-gradient-11)" />
+      <path id="secArm" class="arm"
+         d="M1034,1012c-26.8-10.2-3.7-79.7-11-110.5-3.3-21.8-12.3-32.7-10.9-66.1,22.8-179.5,6.1-355.5,10.9-536.4,36.6,152.5-11.7,363.9,21.9,536.3C1035.6,902.4,1031.2,946.8,1034,1012Zm-6-149.8c9.3,1.2,9.2-53.3.2-52.7C1018.8,808.4,1019.2,863.3,1028,862.2Z"
+         style="fill: url(#linear-gradient-12)" />
+      <path id="minArm" class="arm"
+         d="M1203.8,821.8c10.4,53.4-75.5,18.9-110.5,28-30.2,25-91.5,45.2-121.9,4.6-138.3-36.6-393.9,47.5-480.6-32.5,179.7-11.3,370,28.9,536.3-27.8,25.1.1,44.1,8.4,55.4,23.7C1119.1,828.7,1164.4,818.4,1203.8,821.8Zm-149.2,14.1c.3-23.6-52.2-23.9-52.7-.5S1054.5,859,1054.6,835.9Z"
+         style="fill: url(#linear-gradient-13)" />
+   </svg>
+</div>
+</body>
+
+</html>
